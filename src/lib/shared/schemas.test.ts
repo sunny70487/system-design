@@ -24,6 +24,14 @@ describe('QuestionSchema', () => {
     const r = QuestionSchema.safeParse({ ...sampleQuestion, difficulty: 'L9' });
     expect(r.success).toBe(false);
   });
+  it('defaults related_chapters to []', () => {
+    const parsed = QuestionSchema.parse(sampleQuestion);
+    expect(parsed.related_chapters).toEqual([]);
+  });
+  it('accepts related_chapters array', () => {
+    const parsed = QuestionSchema.parse({ ...sampleQuestion, related_chapters: ['scalability', 'caching'] });
+    expect(parsed.related_chapters).toEqual(['scalability', 'caching']);
+  });
 });
 
 describe('DraftSchema', () => {

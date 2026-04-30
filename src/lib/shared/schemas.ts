@@ -22,6 +22,7 @@ export const QuestionSchema = z.object({
     scaling_considerations: z.array(z.string()),
   }),
   difficulty: z.enum(['L4', 'L5', 'L6']),
+  related_chapters: z.array(z.string()).default([]),
 });
 export type Question = z.infer<typeof QuestionSchema>;
 
