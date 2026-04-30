@@ -4,5 +4,29 @@
     "license": "CC-BY-SA-4.0",
     "license_url": "https://creativecommons.org/licenses/by-sa/4.0/",
     "modifications": "Rewritten in question-and-answer format with Mermaid diagrams"
+  },
+  "kafka": {
+    "source": "https://github.com/karanpratapsingh/system-design",
+    "license": "CC-BY-SA-4.0",
+    "license_url": "https://creativecommons.org/licenses/by-sa/4.0/",
+    "modifications": "Adapted for L6 interview format; original Mermaid diagram authored for this project"
+  },
+  "youtube": {
+    "source": "https://github.com/donnemartin/system-design-primer",
+    "license": "CC-BY-SA-4.0",
+    "license_url": "https://creativecommons.org/licenses/by-sa/4.0/",
+    "modifications": "Adapted for L6 interview format; original Mermaid diagram authored for this project"
+  },
+  "twitter": {
+    "source": "https://github.com/donnemartin/system-design-primer",
+    "license": "CC-BY-SA-4.0",
+    "license_url": "https://creativecommons.org/licenses/by-sa/4.0/",
+    "modifications": "Adapted for L5 interview format; original Mermaid diagram authored for this project"
+  },
+  "whatsapp": {
+    "source": "https://github.com/karanpratapsingh/system-design",
+    "license": "CC-BY-SA-4.0",
+    "license_url": "https://creativecommons.org/licenses/by-sa/4.0/",
+    "modifications": "Adapted for L6 interview format; original Mermaid diagram authored for this project"
   }
 }
