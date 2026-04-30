@@ -1,0 +1,18 @@
+{
+  "license": "CC-BY-SA-4.0",
+  "license_url": "https://creativecommons.org/licenses/by-sa/4.0/",
+  "sources": [
+    {
+      "name": "system-design-primer-zh-tw",
+      "url": "https://github.com/kevingo/system-design-primer-zh-tw",
+      "author": "Kevin Yang (@kevingo)",
+      "license": "CC-BY-SA-4.0"
+    },
+    {
+      "name": "system-design-primer",
+      "url": "https://github.com/donnemartin/system-design-primer",
+      "author": "Donne Martin (@donnemartin)",
+      "license": "CC-BY-SA-4.0"
+    }
+  ]
+}

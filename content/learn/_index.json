@@ -1,0 +1,8 @@
+{
+  "groups": [
+    { "id": "framework",   "title": "解題框架", "order": 0, "chapters": [] },
+    { "id": "estimation",  "title": "估算工具", "order": 1, "chapters": [] },
+    { "id": "foundations", "title": "基礎概念", "order": 2, "chapters": [] },
+    { "id": "data",        "title": "資料層",   "order": 3, "chapters": [] }
+  ]
+}
