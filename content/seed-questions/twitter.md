@@ -2,6 +2,10 @@
 title: Design Twitter
 difficulty: L5
 slug: twitter
+related_chapters:
+  - scalability
+  - caching
+  - databases
 ---
 
 # Design Twitter

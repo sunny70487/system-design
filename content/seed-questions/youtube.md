@@ -2,6 +2,9 @@
 title: Design YouTube
 difficulty: L6
 slug: youtube
+related_chapters:
+  - scalability
+  - databases
 ---
 
 # Design YouTube

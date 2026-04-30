@@ -2,6 +2,9 @@
 title: Design a Distributed Message Queue (Kafka)
 difficulty: L6
 slug: kafka
+related_chapters:
+  - caching
+  - databases
 ---
 
 # Design a Distributed Message Queue (Kafka)

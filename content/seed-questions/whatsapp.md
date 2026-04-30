@@ -2,6 +2,9 @@
 title: Design WhatsApp
 difficulty: L6
 slug: whatsapp
+related_chapters:
+  - scalability
+  - cap-theorem
 ---
 
 # Design WhatsApp

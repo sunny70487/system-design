@@ -2,6 +2,10 @@
 title: Design a URL Shortener
 difficulty: L5
 slug: url-shortener
+related_chapters:
+  - scalability
+  - caching
+  - databases
 ---
 
 # Design a URL Shortener
