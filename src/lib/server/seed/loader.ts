@@ -15,6 +15,7 @@ export interface SeedSummary {
   slug: string;
   title: string;
   difficulty: 'L4' | 'L5' | 'L6';
+  related_chapters: string[];
 }
 
 export interface SeedQuestion extends SeedSummary {
@@ -38,6 +39,9 @@ export async function loadAllSeedQuestions(): Promise<SeedSummary[]> {
       slug: data.slug ?? f.replace(/\.md$/, ''),
       title: data.title,
       difficulty: data.difficulty,
+      related_chapters: Array.isArray(data.related_chapters)
+        ? data.related_chapters
+        : [],
     });
   }
   return out.sort((a, b) => a.title.localeCompare(b.title));
@@ -54,6 +58,9 @@ export async function loadSeedQuestion(slug: string): Promise<SeedQuestion | nul
       slug,
       title: data.title,
       difficulty: data.difficulty,
+      related_chapters: Array.isArray(data.related_chapters)
+        ? data.related_chapters
+        : [],
       markdown: content,
       attribution: attr[slug],
     };

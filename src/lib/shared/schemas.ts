@@ -1,5 +1,20 @@
 import { z } from 'zod';
 
+export const WorkflowStageSchema = z.object({
+  name: z.string().min(1),
+  purpose: z.string().min(1),
+  compute_profile: z.string().min(1),
+  can_interrupt: z.boolean(),
+  retry_strategy: z.string().min(1),
+});
+export type WorkflowStage = z.infer<typeof WorkflowStageSchema>;
+
+export const CapacityEstimationSchema = z.object({
+  assumptions: z.array(z.string()).min(1),
+  calculations: z.array(z.string()).min(1),
+});
+export type CapacityEstimation = z.infer<typeof CapacityEstimationSchema>;
+
 export const QuestionSchema = z.object({
   title: z.string().min(1),
   problem_statement: z.string().min(1),
@@ -8,8 +23,11 @@ export const QuestionSchema = z.object({
     non_functional: z.array(z.string()).min(1),
   }),
   expected_answer: z.object({
+    business_requirements: z.array(z.string()).min(1),
+    capacity_estimation: CapacityEstimationSchema,
     high_level_design: z.string().min(1),
     architecture_diagram: z.string().min(1),
+    workflow_diagram: z.string().min(1),
     key_components: z
       .array(
         z.object({
@@ -18,6 +36,10 @@ export const QuestionSchema = z.object({
         }),
       )
       .min(1),
+    admission_control: z.array(z.string()).min(1),
+    workflow_stages: z.array(WorkflowStageSchema).min(1),
+    failure_and_degradation: z.array(z.string()).min(1),
+    optimizations: z.array(z.string()).min(1),
     tradeoffs: z.array(z.string()),
     scaling_considerations: z.array(z.string()),
   }),

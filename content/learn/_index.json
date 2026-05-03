@@ -2,7 +2,9 @@
   "groups": [
     { "id": "framework",   "title": "解題框架", "order": 0, "chapters": ["framework/interview-steps"] },
     { "id": "estimation",  "title": "估算工具", "order": 1, "chapters": ["estimation/back-of-envelope"] },
-    { "id": "foundations", "title": "基礎概念", "order": 2, "chapters": ["chapters/scalability", "chapters/cap-theorem"] },
-    { "id": "data",        "title": "資料層",   "order": 3, "chapters": ["chapters/databases", "chapters/caching"] }
+    { "id": "foundations", "title": "基礎概念", "order": 2, "chapters": ["chapters/scalability", "chapters/cap-theorem", "chapters/performance-latency", "chapters/consistency-patterns"] },
+    { "id": "data",        "title": "資料層",   "order": 3, "chapters": ["chapters/databases", "chapters/caching"] },
+    { "id": "network",     "title": "網路與流量", "order": 4, "chapters": ["chapters/load-balancing"] },
+    { "id": "distributed", "title": "分散式系統", "order": 5, "chapters": ["chapters/availability-patterns"] }
   ]
 }

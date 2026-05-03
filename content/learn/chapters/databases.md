@@ -19,6 +19,8 @@ related_chapters:
   - scalability
   - cap-theorem
   - caching
+  - availability-patterns
+  - consistency-patterns
 updated: '2026-04-30'
 ---
 

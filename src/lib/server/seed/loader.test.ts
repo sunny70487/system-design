@@ -14,7 +14,7 @@ describe('seed loader', () => {
     const q = await loadSeedQuestion('url-shortener');
     expect(q).not.toBeNull();
     expect(q!.slug).toBe('url-shortener');
-    expect(q!.markdown).toContain('Design a URL Shortener');
+    expect(q!.markdown).toContain('設計短網址服務');
     expect(q!.attribution.license).toBe('CC-BY-SA-4.0');
   });
 

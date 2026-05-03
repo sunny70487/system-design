@@ -13,9 +13,9 @@ export default async function LearnLayout({
   );
 
   return (
-    <div className="flex">
+    <div className="flex min-h-[calc(100dvh-3.5rem)]">
       <Sidebar groups={idx.groups} titlesByPath={titlesByPath} />
-      <div className="flex-1">{children}</div>
+      <div className="min-w-0 flex-1">{children}</div>
     </div>
   );
 }

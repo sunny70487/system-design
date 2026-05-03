@@ -19,6 +19,9 @@ related_chapters:
   - cap-theorem
   - databases
   - caching
+  - availability-patterns
+  - load-balancing
+  - performance-latency
 updated: '2026-04-30'
 ---
 

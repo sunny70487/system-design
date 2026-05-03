@@ -1,16 +1,12 @@
-import mermaid from 'mermaid';
+import { validate } from '@probelabs/maid';
 
 export type MermaidValidation =
   | { ok: true }
   | { ok: false; error: string };
 
-mermaid.initialize({ startOnLoad: false, securityLevel: 'strict' });
-
-export async function validateMermaid(source: string): Promise<MermaidValidation> {
-  try {
-    await mermaid.parse(source, { suppressErrors: false });
-    return { ok: true };
-  } catch (e) {
-    return { ok: false, error: e instanceof Error ? e.message : String(e) };
-  }
+export function validateMermaid(source: string): MermaidValidation {
+  const { errors } = validate(source);
+  if (errors.length === 0) return { ok: true };
+  const msg = errors.map((e) => e.message).join('; ');
+  return { ok: false, error: msg };
 }

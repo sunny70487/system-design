@@ -16,6 +16,8 @@ related_questions:
 related_chapters:
   - scalability
   - databases
+  - performance-latency
+  - consistency-patterns
 updated: '2026-04-30'
 ---
 

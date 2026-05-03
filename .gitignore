@@ -40,3 +40,8 @@ yarn-error.log*
 # typescript
 *.tsbuildinfo
 next-env.d.ts
+.ace-tool/
+
+# local persisted data (sqlite)
+/data/
+docs/

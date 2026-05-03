@@ -15,6 +15,8 @@ related_questions:
 related_chapters:
   - scalability
   - databases
+  - availability-patterns
+  - consistency-patterns
 updated: '2026-04-30'
 ---
 

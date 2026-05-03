@@ -1,3 +1,4 @@
+import { fixText } from '@probelabs/maid';
 import { validateMermaid } from './validator';
 
 export type AutoFixResult =
@@ -5,13 +6,12 @@ export type AutoFixResult =
   | { ok: false; error: string };
 
 export async function autoFixMermaid(source: string): Promise<AutoFixResult> {
-  const initial = await validateMermaid(source);
+  const initial = validateMermaid(source);
   if (initial.ok) return { ok: true, source, fixed: false };
 
   let fixedText = source;
   try {
-    const maid = await import('@probelabs/maid');
-    const result = maid.fixText(source, { level: 'safe' });
+    const result = fixText(source, { level: 'safe' });
     fixedText = result.fixed;
   } catch {
     return { ok: false, error: initial.error };
@@ -21,7 +21,7 @@ export async function autoFixMermaid(source: string): Promise<AutoFixResult> {
     return { ok: false, error: initial.error };
   }
 
-  const recheck = await validateMermaid(fixedText);
+  const recheck = validateMermaid(fixedText);
   if (recheck.ok) return { ok: true, source: fixedText, fixed: true };
   return { ok: false, error: recheck.error };
 }

@@ -17,7 +17,7 @@ export async function runMermaidPipeline(
   }
 
   const retried = await llmRetry(source, fix.error);
-  const after = await validateMermaid(retried);
+  const after = validateMermaid(retried);
   if (after.ok) {
     return { status: 'ok', source: retried, autoFixed: false, llmRetried: true };
   }
